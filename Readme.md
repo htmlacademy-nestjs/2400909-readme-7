@@ -1,7 +1,7 @@
 # Личный проект «Readme»
 
 * Студент: [Дмитрий Остапенко](https://up.htmlacademy.ru/nodejs-2/7/user/2400909).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Наумов](https://htmlacademy.ru/profile/naumov_evg).
 
 ---
 
