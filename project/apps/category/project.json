@@ -1,7 +1,7 @@
 {
-  "name": "file",
+  "name": "category",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/file/src",
+  "sourceRoot": "apps/category/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -9,14 +9,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "file:build"
+        "buildTarget": "category:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "file:build:development"
+          "buildTarget": "category:build:development"
         },
         "production": {
-          "buildTarget": "file:build:production"
+          "buildTarget": "category:build:production"
         }
       }
     }

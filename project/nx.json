@@ -39,7 +39,8 @@
         "apps/post-e2e/**/*",
         "apps/file-e2e/**/*",
         "apps/notify-e2e/**/*",
-        "apps/api-e2e/**/*"
+        "apps/api-e2e/**/*",
+        "apps/category-e2e/**/*"
       ]
     }
   ]
