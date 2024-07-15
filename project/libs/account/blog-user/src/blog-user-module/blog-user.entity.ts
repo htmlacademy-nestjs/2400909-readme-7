@@ -1,6 +1,4 @@
-import { StorableEntity } from '@project/shared/shared-core';
-
-import { Entity, AuthUser} from '@project/shared/shared-core';
+import { StorableEntity, UserRole, AuthUser, Entity } from '@project/shared-core';
 
 export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
   public email: string;
