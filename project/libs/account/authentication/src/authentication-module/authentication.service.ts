@@ -14,7 +14,7 @@ export class AuthenticationService {
   ) {}
 
   public async register(dto: CreateUserDto) {
-    const {email, firstname, lastname, avatarUrl, password, dateBirth} = dto;
+    const {email, firstname, lastname, password, dateBirth} = dto;
 
     const blogUser = {
       email, firstname, lastname,
