@@ -8,6 +8,7 @@ import { UserRole } from '@project/shared-core';
 import { AUTH_USER_EXISTS, AUTH_USER_NOT_FOUND, AUTH_USER_PASSWORD_WRONG } from './authentication.constant';
 import { LoginUserDto } from '../dto/login-user.dto';
 import { dbConfig } from '@project/account-config';
+import { BcryptHasher } from '../hashers/bcrypt.hasher';
 
 @Injectable()
 export class AuthenticationService {
@@ -17,6 +18,7 @@ export class AuthenticationService {
     @Inject(dbConfig.KEY)
     private readonly databaseConfig: ConfigType<typeof dbConfig>,
     private readonly configService: ConfigService,
+    private readonly hasher: BcryptHasher,
   ) {
     // Извлекаем настройки из конфигурации вариант №1
     console.log(databaseConfig.host);
@@ -45,9 +47,9 @@ export class AuthenticationService {
     }
 
     const userEntity = await new BlogUserEntity(blogUser)
-      .setPassword(password);
+      .setPasswordHash(await this.hasher.hash(password));
 
-    this.blogUserRepository.save(userEntity);
+    await this.blogUserRepository.save(userEntity);
     return userEntity;
   }
 

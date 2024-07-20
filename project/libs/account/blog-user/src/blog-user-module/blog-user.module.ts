@@ -7,7 +7,10 @@ import { BlogUserModel, BlogUserSchema } from './blog-user.model';
 
 @Module({
   imports: [MongooseModule.forFeature([
-    { name: BlogUserModel.name, schema: BlogUserSchema}
+    {
+      name: BlogUserModel.name,
+      schema: BlogUserSchema
+    }
   ])],
   providers: [BlogUserRepository, BlogUserFactory],
   exports: [BlogUserRepository],

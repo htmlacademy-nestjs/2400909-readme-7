@@ -5,6 +5,8 @@ import { Document } from 'mongoose';
 @Schema({
   collection: 'accounts',
   timestamps: true,
+  toJSON: {virtuals: true},
+  toObject: {virtuals: true},
 })
 export class BlogUserModel extends Document implements AuthUser {
   @Prop()
