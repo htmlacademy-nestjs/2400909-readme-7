@@ -8,6 +8,7 @@
     "@nestjs/common": "^10.0.2",
     "@nestjs/config": "3.2.3",
     "@nestjs/core": "^10.0.2",
+    "@nestjs/mongoose": "10.0.10",
     "@nestjs/platform-express": "^10.0.2",
     "@nestjs/swagger": "7.4.0",
     "axios": "^1.6.0",
@@ -16,6 +17,7 @@
     "class-validator": "0.14.1",
     "dayjs": "1.11.11",
     "joi": "17.13.3",
+    "mongoose": "8.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0"
