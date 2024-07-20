@@ -1,4 +1,4 @@
-import { registerAs } from '@nestjs/config';
+import { ConfigType, registerAs } from '@nestjs/config';
 import * as Joi from 'joi';
 
 const DEFAULT_MONGO_PORT = 27017;
@@ -42,4 +42,6 @@ function getDbConfig(): MongoConfig {
   return config;
 }
 
-export default registerAs('db', getDbConfig);
+export default registerAs('db', async (): Promise<ConfigType<typeof getDbConfig>> => {
+  return getDbConfig();
+});
