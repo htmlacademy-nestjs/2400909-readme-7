@@ -61,7 +61,7 @@ export class AuthenticationService {
       throw new NotFoundException(AUTH_USER_NOT_FOUND);
     }
 
-    if (!await existUser.comparePassword(password)) {
+    if (!await this.hasher.compare(password, existUser.passwordHash)) {
       throw new UnauthorizedException(AUTH_USER_PASSWORD_WRONG);
     }
 

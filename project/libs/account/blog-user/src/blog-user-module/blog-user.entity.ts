@@ -1,5 +1,3 @@
-import { compare } from 'bcrypt';
-
 import { StorableEntity, UserRole, AuthUser, Entity } from '@project/shared-core';
 
 export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
@@ -44,9 +42,5 @@ export class BlogUserEntity extends Entity implements StorableEntity<AuthUser> {
   public async setPasswordHash(passwordHash: string): Promise<BlogUserEntity> {
     this.passwordHash = passwordHash;
     return this;
-  }
-
-  public async comparePassword(password: string): Promise<boolean> {
-    return compare(password, this.passwordHash);
   }
 }
